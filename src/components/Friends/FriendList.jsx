@@ -1,3 +1,4 @@
+import propTypes from 'prop-types';
 import React from 'react';
 import css from './Friends.module.css';
 
@@ -27,4 +28,8 @@ export const FriendList = ({ friends }) => {
       </ul>
     </div>
   );
+};
+
+FriendList.propTypes = {
+  friends: propTypes.array,
 };

@@ -1,4 +1,4 @@
-// import './Statistic.css';
+import propTypes from 'prop-types';
 import style from './Statistics.module.css';
 
 export const Statistics = ({ stats, title }) => {
@@ -33,3 +33,8 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, 0)}`;
 }
+
+Statistics.propTypes = {
+  stats: propTypes.array.isRequired,
+  title: propTypes.string.isRequired,
+};

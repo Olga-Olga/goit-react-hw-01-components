@@ -6,6 +6,11 @@
   gap: 15px;
   margin: 15px auto;
   padding: 10px;
+  border-radius: 5px;
+}
+
+.item:hover {
+  scale: 1.05;
 }
 
 .status {
