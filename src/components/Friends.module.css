@@ -1,0 +1,25 @@
+.item {
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  width: 200px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 15px auto;
+  padding: 10px;
+}
+
+.status {
+  content: '';
+  width: 15px;
+  height: 15px;
+  background-color: green;
+  border-radius: 50%;
+  display: block;
+  margin-left: 10px;
+}
+
+.friendList {
+  margin: 0;
+  padding: 0;
+  margin-top: 50px;
+}
