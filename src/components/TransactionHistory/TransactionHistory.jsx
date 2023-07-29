@@ -17,7 +17,7 @@ export const TransactionHistory = ({ tr }) => {
           {tr.map(el => {
             return (
               <tr key={el.id}>
-                <td>{el.type}</td>
+                <td>{cappitalizeFirstLetter(el.type)}</td>
                 <td>{el.amount}</td>
                 <td>{el.currency}</td>
               </tr>
@@ -28,3 +28,7 @@ export const TransactionHistory = ({ tr }) => {
     </div>
   );
 };
+
+function cappitalizeFirstLetter(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
