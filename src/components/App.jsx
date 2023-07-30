@@ -21,7 +21,7 @@ export const App = () => {
 };
 
 const Wrapper = styled.div`
-  background-color: #000000b2;
+  background-color: #000000a6;
   padding: 0;
   margin: 0;
   color: white;
