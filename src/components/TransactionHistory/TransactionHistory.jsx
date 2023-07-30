@@ -1,6 +1,6 @@
 import style from './TransactionHistory.module.css';
 import React from 'react';
-
+import propTypes from 'prop-types';
 export const TransactionHistory = ({ transactions }) => {
   return (
     <div>
@@ -32,3 +32,14 @@ export const TransactionHistory = ({ transactions }) => {
 function cappitalizeFirstLetter(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
+
+TransactionHistory.propTypes = {
+  transactions: propTypes.arrayOf(
+    propTypes.shape({
+      id: propTypes.string.isRequired,
+      type: propTypes.string.isRequired,
+      amount: propTypes.string.isRequired,
+      currency: propTypes.string.isRequired,
+    }).isRequired
+  ).isRequired,
+};
