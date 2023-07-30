@@ -1,5 +1,5 @@
 import propTypes from 'prop-types';
-import style from './Statistics.module.css';
+import style from './Statistics.module.scss';
 
 export const Statistics = ({ stats, title }) => {
   const markup = stats.map(el => {

@@ -1,4 +1,4 @@
-import style from './TransactionHistory.module.css';
+import style from './TransactionHistory.module.scss';
 import React from 'react';
 
 export const TransactionHistory = ({ transactions }) => {
