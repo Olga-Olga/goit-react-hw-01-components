@@ -6,38 +6,35 @@ import { Profile } from './Profile/Profile';
 import { Statistics } from './Statistic/Statistics';
 import { FriendList } from './Friends/FriendList';
 import { TransactionHistory } from './TransactionHistory/TransactionHistory';
+import { styled } from 'styled-components';
+import { theme } from './styles/theme';
 
 export const App = () => {
   return (
-    <div
-    // style={{
-    //   height: '100vh',
-    //   display: 'flex',
-    //   justifyContent: 'center',
-    //   alignItems: 'center',
-    //   fontSize: 40,
-    //   color: '#010101',
-    // }}
-    >
-      <Profile
-        {...user}
-        // username={user.username}
-        // tag={user.tag}
-        // location={user.location}
-        // avatar={user.avatar}
-        // stats={user.stats}
-      />
+    <Wrapper>
+      <Profile {...user} />
       <Statistics stats={stats} title="Document type stats" />
       <FriendList friends={friends} />
       <TransactionHistory transactions={transactions} />;
-    </div>
+    </Wrapper>
   );
 };
 
-// function getCount(str) {
-//   const pattern = /[aeiou]/gi;
-//   return str.match(pattern).length ? str.match(pattern).length : '0';
-// }
+const Wrapper = styled.div`
+  background-color: #000000b2;
+  padding: 0;
+  margin: 0;
+  color: white;
+`;
 
-// console.log(getCount('q3gadhr65hx'));
-// console.log(getCount(''));
+// const Button = styled.button`
+//   background-color: #3498db;
+//   color: white;
+//   padding: 10px 20px;
+//   border: none;
+//   border-radius: ${({ theme }) => {
+//     return theme.radius.default;
+//   }};
+//   cursor: pointer;
+//   box-shadow: ${({ theme }) => theme.shadows.default};
+// `;

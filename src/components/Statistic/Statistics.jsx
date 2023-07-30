@@ -1,30 +1,22 @@
 import propTypes from 'prop-types';
-import style from './Statistics.module.scss';
+// import style from './Statistics.module.scss';
+import { Title, Statlist, Item, Section } from './StatisticsStyle';
 
 export const Statistics = ({ stats, title }) => {
   const markup = stats.map(el => {
     return (
-      <li
-        key={el.id}
-        className={style.item}
-        style={{ backgroundColor: getRandomHexColor() }}
-      >
-        <span className={style.label}>{el.label} </span>
-        <span className={style.percentage}>{el.percentage}</span>
-      </li>
+      <Item key={el.id} style={{ backgroundColor: getRandomHexColor() }}>
+        <span>{el.label} </span>
+        <span>{el.percentage}</span>
+      </Item>
     );
   });
-  //   const mark = stats.map(el => {
-  //     `<li key=${el.id} className="item">
-  //       <span className="label">${el.lable}</span>
-  //       <span className="percentage">${el.percentage}</span>
-  //     </li>`;
-  //   });
+
   return (
-    <section className={style.section}>
-      {title ? <h2 className={style.title}>{title}</h2> : null}
-      <ul className={style.statlist}>{markup}</ul>
-    </section>
+    <Section>
+      {title ? <Title>{title}</Title> : null}
+      <Statlist>{markup}</Statlist>
+    </Section>
   );
 };
 

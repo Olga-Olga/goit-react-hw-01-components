@@ -1,6 +1,6 @@
-@import './../styles/_vars';
+import styled from 'styled-components';
 
-.item {
+export const Item = styled.li`
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
   width: 200px;
   display: flex;
@@ -12,29 +12,24 @@
   transition: background-color 400ms ease, transform 400ms ease;
   &:hover {
     cursor: pointer;
-    background-color: $backColor;
+    background-color: #f5cad2b2;
     transform: scale(1.2);
   }
-}
+`;
 
-// .item:hover {
-//   transform: scale(1.5);
-//   background-color: $backColor;
-//   cursor: poiner;
-// }
-
-.status {
+export const Status = styled.span`
   content: '';
   width: 15px;
   height: 15px;
-  background-color: $isActiveColor;
+  /* background-color: $isActiveColor; */
+  background-color: red;
   border-radius: 50%;
   display: block;
   margin-left: 10px;
-}
+`;
 
-.friendList {
+export const FriendListUl = styled.ul`
   margin: 0;
   padding: 0;
   margin-top: 50px;
-}
+`;

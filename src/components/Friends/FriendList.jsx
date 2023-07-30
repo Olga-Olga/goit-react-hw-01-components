@@ -1,31 +1,24 @@
 import propTypes from 'prop-types';
 import React from 'react';
-import css from './Friends.module.scss';
+// import css from './Friends.module.scss';
+import { Item, FriendListUl, Status } from './FriendsStyle.jsx';
 
 export const FriendList = ({ friends }) => {
   return (
     <div>
-      <ul className={css.friendList}>
+      <FriendListUl>
         {friends.map(({ id, isOnline, avatar, name }) => {
           return (
-            <li key={id} className={css.item}>
-              <span
-                className={css.status}
-                style={{ backgroundColor: isOnline ? 'green' : 'red' }}
-              >
+            <Item key={id}>
+              <Status style={{ backgroundColor: isOnline ? 'green' : 'red' }}>
                 {isOnline}
-              </span>
-              <img
-                className={css.avatar}
-                src={avatar}
-                alt="User avatar"
-                width="48"
-              />
-              <p className={css.name}>{name}</p>
-            </li>
+              </Status>
+              <img src={avatar} alt="User avatar" width="48" />
+              <p>{name}</p>
+            </Item>
           );
         })}
-      </ul>
+      </FriendListUl>
     </div>
   );
 };
