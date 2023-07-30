@@ -1,7 +1,7 @@
 import style from './TransactionHistory.module.css';
 import React from 'react';
 
-export const TransactionHistory = ({ tr }) => {
+export const TransactionHistory = ({ transactions }) => {
   return (
     <div>
       <table className={style.transactionHistory}>
@@ -14,7 +14,7 @@ export const TransactionHistory = ({ tr }) => {
         </thead>
 
         <tbody>
-          {tr.map(el => {
+          {transactions.map(el => {
             return (
               <tr key={el.id}>
                 <td>{cappitalizeFirstLetter(el.type)}</td>
